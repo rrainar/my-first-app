@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import NavbarComponent from './components/NavbarComponent/index.jsx';
+import FooterComponent from './components/footer/index.jsx';
+import TribesComponent from './components/tribes/index.jsx';
+import EmployeesComponent from './components/employees/index.jsx';
+import EmployeesTitleComponent from './components/employeestitle/index.jsx';
+import TribesTitleComponent from './components/Tribetitle/index.jsx';
+import InfoModal from './components/Module-Popup/index.jsx';
+import TableData from './components/form/form.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <NavbarComponent /> <br/> <br/>
+      <TribesTitleComponent /><br/><br/><br/>
+      <TableData />
+      <InfoModal /><br/><br/><br/><br/>
+      <EmployeesTitleComponent /><br/><br/><br/><br/>
+      <EmployeesComponent /><br/><br/>
+      <FooterComponent />
     </div>
   );
 }

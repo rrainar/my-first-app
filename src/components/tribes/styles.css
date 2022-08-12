@@ -1,0 +1,8 @@
+.table   {
+    border: none;
+    width: 50   ;
+    left: 0px;
+    padding-right: 40px;
+    height: 0px;
+    overflow-y: scroll;
+}
