@@ -8,12 +8,12 @@ const ReadOnlyRowEmployees = ({ EmployeeInfo, handleEditClickEmployees, handleDe
       <td>{EmployeeInfo.occupation}</td>
       <td>{EmployeeInfo.tribe}</td>
       <td>
-        <button
-          type="button" class="btn btn-warning"
-          onClick={(event) => handleEditClickEmployees(event, EmployeeInfo)}
-        >
-          Edit
-        </button>
+        {/* <button
+        //   type="button" class="btn btn-warning"
+        //   onClick={(event) => handleEditClickEmployees(event, EmployeeInfo)}
+        // >
+        //   Edit
+        // </button> */}
         <button type="button" class="btn btn-danger" onClick={() => handleDeleteClickEmployees(EmployeeInfo.id)}>
           Delete
         </button>

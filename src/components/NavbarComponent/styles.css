@@ -1,0 +1,14 @@
+.hoho {
+    color:white;
+    text-decoration:none; 
+}
+
+.toomas{
+    position:relative;
+    position:absolute;
+    right: 10px; 
+    top: 40px; 
+}
+.hoho:hover {
+    color: rgb(7, 143, 16); /*will change color of text within the element on hover */
+    }

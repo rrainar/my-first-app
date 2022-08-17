@@ -117,7 +117,7 @@ const App = () => {
       };
     
       return (
-        <div className="app-container border bg-dark p-4">
+        <div className="table2 app-container border bg-dark p-4">
           <form onSubmit={handleEditFormSubmit}>
             <table className='table'>
               <thead>
@@ -151,8 +151,7 @@ const App = () => {
               </tbody>
             </table>
           </form>
-    
-          <form onSubmit={handleAddFormSubmit}>
+          <form class="table2" onSubmit={handleAddFormSubmit}>
             <input className="idr"
               type="text"
               name="tribeName"

@@ -1,14 +1,13 @@
 import { nanoid } from "nanoid";
 import EmployeesNewCards from "../newEmployee/index.jsx";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ReadOnlyRowEmployees from "../ReadOnlyRowEmployees/index.jsx";
-import EditableRowEmployees from "../EditableRowEmployees/index.jsx";
+// import EditableRowEmployees from "../EditableRowEmployees/index.jsx";
 import React, { useState, Fragment } from "react";
 import { Modal, Button } from "react";
 import './styles.css';
 
 
-const Apper = () => {
+const Apperki = () => {
       const [EmployeesInfos, setEmployeesInfos] = useState (EmployeesNewCards);
       const [addFormDataEmployees, setAddFormDataEmployees] = useState({
         image:"https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png",
@@ -18,13 +17,13 @@ const Apper = () => {
         tribe: "",
       });
     
-      const [editFormDataEmployees, setEditFormDataEmployees] = useState({
-        image:"https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png",
-        firstName: "",
-        lastName: "",
-        occupation: "",
-        tribe: "",
-      });
+      // const [editFormDataEmployees, setEditFormDataEmployees] = useState({
+      //   image:"https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png",
+      //   firstName: "",
+      //   lastName: "",
+      //   occupation: "",
+      //   tribe: "",
+      // });
     
       const [editEmployeesInfoId, setEditEmployeesInfoId] = useState(null);
       const [show, setShow] = useState(false);
@@ -43,17 +42,17 @@ const Apper = () => {
         setAddFormDataEmployees(newFormData);
       };
     
-      const handleEditFormChangeEmployees = (event) => {
-        event.preventDefault();
+      // const handleEditFormChangeEmployees = (event) => {
+      //   event.preventDefault();
     
-        const fieldName = event.target.getAttribute("name");
-        const fieldValue = event.target.value;
+      //   const fieldName = event.target.getAttribute("name");
+      //   const fieldValue = event.target.value;
     
-        const newFormData = { ...editFormDataEmployees };
-        newFormData[fieldName] = fieldValue;
+      //   const newFormData = { ...editFormDataEmployees };
+      //   newFormData[fieldName] = fieldValue;
     
-        setEditFormDataEmployees(newFormData);
-      };
+      //   setEditFormDataEmployees(newFormData);
+      // };
     
       const handleAddFormSubmitEmployees = (event) => {
         event.preventDefault();
@@ -70,44 +69,44 @@ const Apper = () => {
         setEmployeesInfos(newEmployeesInfos);
       };
     
-      const handleEditFormSubmitEmployees = (event) => {
-        event.preventDefault();
+      // const handleEditFormSubmitEmployees = (event) => {
+      //   event.preventDefault();
     
-        const editedEmployeesInfo = {
-          id: editEmployeesInfoId,
-          firstName: editFormDataEmployees.firstName,
-          lastName: editFormDataEmployees.lastName,
-          occupation: editFormDataEmployees.occupation,
-          tribe: editFormDataEmployees.tribe,
-        };
+      //   const editedEmployeesInfo = {
+      //     id: editEmployeesInfoId,
+      //     firstName: editFormDataEmployees.firstName,
+      //     lastName: editFormDataEmployees.lastName,
+      //     occupation: editFormDataEmployees.occupation,
+      //     tribe: editFormDataEmployees.tribe,
+      //   };
     
-        const newEmployeesInfos = [...EmployeesInfos];
+      //   const newEmployeesInfos = [...EmployeesInfos];
     
-        const index = EmployeesInfos.findIndex((EmployeesInfo) => EmployeesInfo.id === editEmployeesInfoId);
+      //   const index = EmployeesInfos.findIndex((EmployeesInfo) => EmployeesInfo.id === editEmployeesInfoId);
     
-        newEmployeesInfos[index] = editedEmployeesInfo;
+      //   newEmployeesInfos[index] = editedEmployeesInfo;
     
-        setEmployeesInfos(newEmployeesInfos);
-        setEditEmployeesInfoId(null);
-      };
+      //   setEmployeesInfos(newEmployeesInfos);
+      //   setEditEmployeesInfoId(null);
+      // };
     
-      const handleEditClickEmployees = (event, EmployeesInfo) => {
-        event.preventDefault();
-        setEditEmployeesInfoId(EmployeesInfo.id);
+      // const handleEditClickEmployees = (event, EmployeesInfo) => {
+      //   event.preventDefault();
+      //   setEditEmployeesInfoId(EmployeesInfo.id);
     
-        const formValues = {
-          firstName: EmployeesInfo.firstName,
-          lastName: EmployeesInfo.lastName,
-          occupation: EmployeesInfo.occupation,
-          tribe: EmployeesInfo.tribe,
-        };
+        // const formValues = {
+        //   firstName: EmployeesInfo.firstName,
+        //   lastName: EmployeesInfo.lastName,
+        //   occupation: EmployeesInfo.occupation,
+        //   tribe: EmployeesInfo.tribe,
+        // };
     
-        setEditFormDataEmployees(formValues);
-      };
+      //   setEditFormDataEmployees(formValues);
+      // };
     
-      const handleCancelClickEmployees = () => {
-        setEditEmployeesInfoId(null);
-      };
+      // const handleCancelClickEmployees = () => {
+      //   setEditEmployeesInfoId(null);
+      // };
     
       const handleDeleteClickEmployees = (EmployeesInfoId) => {
         const newEmployeesInfos = [...EmployeesInfos];
@@ -126,8 +125,8 @@ const Apper = () => {
             <Button className="nextButton yesyes" onClick={handleShow}>
               + Add Employee
             </Button> </div>
-      
-          <form onSubmit={handleEditFormSubmitEmployees}>
+       
+          {/* <form onSubmit={handleEditFormSubmitEmployees}>
             <table className='table'>
               <thead>
                 <tr className="whitey">
@@ -138,47 +137,51 @@ const Apper = () => {
                   <th>Actions</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody>  */}
                 {EmployeesInfos.map((EmployeesInfo) => (
-                  <Fragment>
-                    {editEmployeesInfoId === EmployeesInfo.id ? (
+                  // <Fragment>
+                    {/* {editEmployeesInfoId === EmployeesInfo.id ? (
                       <EditableRowEmployees
                         editFormData={editFormDataEmployees}
                         handleEditFormChange={handleEditFormChangeEmployees}
-                        handleCancelClick={handleCancelClickEmployees}
-                      />
-                    ) : (
+                        handleCancelClick={handleCancelClickEmployees} */}
+                      // />
+                ) (
                       <ReadOnlyRowEmployees
-                        EmployeesInfo={EmployeesInfo}
-                        handleEditClick={handleEditClickEmployees}
+                       EmployeesInfo={EmployeesInfo}
+                        // handleEditClick={handleEditClickEmployees}
                         handleDeleteClick={handleDeleteClickEmployees}
-                      />
-                    )}
-                  </Fragment>
-                ))}
-              </tbody>
-            </table>
-          </form>
+                        />
+                        // )}
+                        // </Fragment>
+                      )
+                      )
+                      }
+      
+        
+         {/* </tbody>
+          </table> 
+           </form> */}
           <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
           <Modal.Title>Employee Form</Modal.Title>
         </Modal.Header>
         <Modal.Body onSubmit={handleAddFormSubmitEmployees}>
-          <input className="idr5" id="firstName"
+          <input className="idr5"
               type="text"
               name="firstName"
               required="required"
               placeholder="Enter First Name..."
               onChange={handleAddFormChangeEmployees}
             />
-              <input className="idr5" id="lastName"
+              <input className="idr5"
               type="text"
               name="lastName"
               required="required"
               placeholder="Enter Last Name..."
               onChange={handleAddFormChangeEmployees}
             />
-              <input className="idr5" id="occupation"
+              <input className="idr5"
               type="text"
               name="occupation"
               required="required"
@@ -187,7 +190,7 @@ const Apper = () => {
             />
               
                     
-                    <select value="" id="tribe" name="tribe" onChange={handleAddFormChangeEmployees}>
+                    <select value="" name="tribe" onChange={handleAddFormChangeEmployees}>
                     <option value="tribe0"> </option>
                     <option value="tribe1">Internstellars</option>
                     <option value="tribe2">GhostBusters</option>
@@ -201,13 +204,13 @@ const Apper = () => {
             Close
           </Button>
             <Button type="submit" class="btn btn-success suc9">+ Add Employees</Button>
-            </Modal.Footer>
+            </Modal.Footer> 
             </Modal>
-        </div>
+        </div> 
       
       );
     };
     
     
 
-    export default Apper;
+    export default Apperki;
